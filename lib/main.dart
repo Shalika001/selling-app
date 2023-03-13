@@ -10,7 +10,7 @@ class selling_app extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    backgroundColor: Colors.grey[600],
+    backgroundColor: Colors.grey[400],
       appBar: AppBar(
         title: Text('Log in'),
         centerTitle: true,
@@ -19,6 +19,7 @@ class selling_app extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Center(
               child: CircleAvatar(
@@ -33,7 +34,7 @@ class selling_app extends StatelessWidget {
               color: Colors.grey[850],
             ),
             Text(
-              'User name',
+              'User name or email',
               style: TextStyle(
                 color: Colors.black,
                 letterSpacing: 1.5,
@@ -41,14 +42,12 @@ class selling_app extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10.0),
-            Text(
-                'Shalika',
-                style: TextStyle(
-                    color: Colors.blue[600],
-                    letterSpacing: 1.5,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold
-                ),
+            const TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'User name or email',
+              ),
             ),
             SizedBox(height: 20.0),
             Text(
@@ -60,19 +59,25 @@ class selling_app extends StatelessWidget {
                 ),
             ),
             SizedBox(height: 10.0),
-            Text(
-                '************',
-                style: TextStyle(
-                    color: Colors.blue[600],
-                    letterSpacing: 1.5,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold
-                )
-            )
+            const TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Password',
+              ),
+            ),
+            SizedBox(height: 40.0),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {  },
+                child: Text('Log in'),
+              )
+            ),
+            SizedBox(height: 40.0),
+            Text('Do not have an account'),
           ],
         ),
       ),
     );
   }
 }
-
