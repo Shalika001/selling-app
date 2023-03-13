@@ -10,7 +10,7 @@ class selling_app extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    backgroundColor: Colors.grey[600],
+    backgroundColor: Colors.grey[400],
       appBar: AppBar(
         title: Text('Log in'),
         centerTitle: true,
@@ -29,7 +29,7 @@ class selling_app extends StatelessWidget {
               ),
             ),
             Divider(
-              height: 90.0,
+              height: 100.0,
               color: Colors.grey[850],
             ),
             Text(
@@ -44,13 +44,13 @@ class selling_app extends StatelessWidget {
             Text(
                 'Shalika',
                 style: TextStyle(
-                    color: Colors.blue[600],
+                    color: Colors.blue[900],
                     letterSpacing: 1.5,
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold
                 ),
             ),
-            SizedBox(height: 20.0),
+            SizedBox(height: 30.0),
             Text(
                 'Password',
                 style: TextStyle(
@@ -63,22 +63,24 @@ class selling_app extends StatelessWidget {
             Text(
                 '************',
                 style: TextStyle(
-                    color: Colors.blue[600],
+                    color: Colors.blue[900],
                     letterSpacing: 1.5,
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold
                 ),
             ),
+            SizedBox(height: 40.0),
             Center(
-              child: FloatingActionButton(
+              child: ElevatedButton(
                 onPressed: () {  },
-                child: Text('Log In'),
-              ),
+                child: Text('Log in'),
+              )
             ),
+            SizedBox(height: 40.0),
+            Text('Do not have an account'),
           ],
         ),
       ),
     );
   }
 }
-
