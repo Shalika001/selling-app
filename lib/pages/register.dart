@@ -25,31 +25,44 @@ class _LoginState extends State<Register> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Center(
-              child: CircleAvatar(
-                backgroundImage: AssetImage(
-                    'assets/shalika.jpg'
-                ),
-                radius: 40.0,
-              ),
-            ),
-            Divider(
-              height: 90.0,
-              color: Colors.grey[850],
-            ),
+
             textField(
-              label: 'Username or Email',
-              labelText: 'Username or Email',
+              label: 'Name',
+              labelText: 'name',
             ),
-            SizedBox(height: 50.0),
+            SizedBox(height: 30.0),
+            textField(
+              label: 'username',
+              labelText: 'username',
+            ),
+            SizedBox(height: 30.0),
+            textField(
+              label: 'Email',
+              labelText: 'email',
+            ),
+            SizedBox(height: 30.0),
             textField(
               label: 'Password',
               labelText: 'Password',
             ),
-            SizedBox(height: 60.0),
+
+            SizedBox(height: 30.0),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {  },
+                child: Text(
+                  'Register',
+                  style: TextStyle(
+                      color: Colors.black
+                  ),
+                ),
+              ),
+            ),
+
+            SizedBox(height: 30.0),
             Center(
               child: Text(
-                'Do not have an account?',
+                'alerady have an account?',
                 style: TextStyle(
                   fontSize: 15.0,
                 ),
@@ -60,7 +73,7 @@ class _LoginState extends State<Register> {
                 children: [
                   Center(
                     child: Text(
-                      'Register',
+                      'Login',
                       style: TextStyle(
                         fontSize: 20.0,
                         decoration: TextDecoration.underline,
