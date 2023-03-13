@@ -67,8 +67,14 @@ class selling_app extends StatelessWidget {
                     letterSpacing: 1.5,
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold
-                )
-            )
+                ),
+            ),
+            Center(
+              child: FloatingActionButton(
+                onPressed: () {  },
+                child: Text('Log In'),
+              ),
+            ),
           ],
         ),
       ),
