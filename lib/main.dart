@@ -29,11 +29,11 @@ class selling_app extends StatelessWidget {
               ),
             ),
             Divider(
-              height: 100.0,
+              height: 90.0,
               color: Colors.grey[850],
             ),
             Text(
-              'User name',
+              'User name or email',
               style: TextStyle(
                 color: Colors.black,
                 letterSpacing: 1.5,
@@ -41,16 +41,14 @@ class selling_app extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10.0),
-            Text(
-                'Shalika',
-                style: TextStyle(
-                    color: Colors.blue[900],
-                    letterSpacing: 1.5,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold
-                ),
+            const TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'User name or email',
+              ),
             ),
-            SizedBox(height: 30.0),
+            SizedBox(height: 20.0),
             Text(
                 'Password',
                 style: TextStyle(
@@ -60,14 +58,12 @@ class selling_app extends StatelessWidget {
                 ),
             ),
             SizedBox(height: 10.0),
-            Text(
-                '************',
-                style: TextStyle(
-                    color: Colors.blue[900],
-                    letterSpacing: 1.5,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold
-                ),
+            const TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Password',
+              ),
             ),
             SizedBox(height: 40.0),
             Center(
