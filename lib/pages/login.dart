@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:selling_app/widgets/textFeild.dart';
 
@@ -39,13 +41,36 @@ class _LoginState extends State<Login> {
                 label: 'Username or Email',
                 labelText: 'Username or Email',
             ),
-            SizedBox(height: 20.0),
+            SizedBox(height: 50.0),
             textField(
                 label: 'Password',
                 labelText: 'Password',
             ),
-            SizedBox(height: 40.0),
-            Text('Do not have an account'),
+            SizedBox(height: 60.0),
+            Center(
+              child: Text(
+                  'Do not have an account?',
+                style: TextStyle(
+                  fontSize: 15.0,
+                ),
+              ),
+            ),
+            InkWell(
+              child: Column(
+                children: [
+                  Center(
+                  child: Text(
+                    'Register',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      decoration: TextDecoration.underline,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
