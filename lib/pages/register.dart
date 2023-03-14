@@ -69,6 +69,9 @@ class _LoginState extends State<Register> {
               ),
             ),
             InkWell(
+              onTap: (){
+                Navigator.pop(context);
+              },
               child: Column(
                 children: [
                   Center(
@@ -77,7 +80,7 @@ class _LoginState extends State<Register> {
                       style: TextStyle(
                         fontSize: 20.0,
                         decoration: TextDecoration.underline,
-                        color: Colors.blue,
+                        color: Colors.blue[900],
                       ),
                     ),
                   ),

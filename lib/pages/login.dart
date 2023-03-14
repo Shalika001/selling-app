@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:selling_app/pages/register.dart';
 import 'package:selling_app/widgets/textFeild.dart';
 
 class Login extends StatefulWidget {
@@ -30,7 +31,6 @@ class _LoginState extends State<Login> {
                 backgroundImage: AssetImage(
                     'assets/shalika.jpg'
                 ),
-
                 radius: 40.0,
               ),
             ),
@@ -42,13 +42,13 @@ class _LoginState extends State<Login> {
 
             textField(
                 label: 'Username or Email',
-                labelText: 'Username or Email',
+                labelText: 'username or email',
             ),
 
             SizedBox(height: 50.0),
             textField(
                 label: 'Password',
-                labelText: 'Password',
+                labelText: 'password',
             ),
 
             SizedBox(height: 30.0),
@@ -75,6 +75,12 @@ class _LoginState extends State<Login> {
             ),
 
             InkWell(
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Register()),
+                );
+              },
               child: Column(
                 children: [
                   Center(
