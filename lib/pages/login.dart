@@ -1,8 +1,8 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:selling_app/pages/register.dart';
 import 'package:selling_app/widgets/textFeild.dart';
+
+import 'myProducts.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -54,7 +54,12 @@ class _LoginState extends State<Login> {
             SizedBox(height: 30.0),
             Center(
               child: ElevatedButton(
-                onPressed: () {  },
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const myProducts()),
+                  );
+                },
                 child: Text(
                     'Login',
                   style: TextStyle(

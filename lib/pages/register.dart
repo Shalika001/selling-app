@@ -1,6 +1,5 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
+import 'package:selling_app/pages/myProducts.dart';
 import 'package:selling_app/widgets/textFeild.dart';
 
 class Register extends StatefulWidget {
@@ -20,7 +19,7 @@ class _LoginState extends State<Register> {
         centerTitle: true,
         backgroundColor: Colors.grey[900],
       ),
-      body: Padding(
+            body: Padding(
         padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,7 +48,12 @@ class _LoginState extends State<Register> {
             SizedBox(height: 30.0),
             Center(
               child: ElevatedButton(
-                onPressed: () {  },
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const myProducts()),
+                  );
+                },
                 child: Text(
                   'Register',
                   style: TextStyle(
