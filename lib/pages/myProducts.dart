@@ -17,6 +17,24 @@ class _myProductsState extends State<myProducts> {
         centerTitle: true,
         backgroundColor: Colors.grey[900],
       ),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Center(
+              child: Text(
+                'Item List',
+                style: TextStyle(
+                  fontSize:25.0,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
