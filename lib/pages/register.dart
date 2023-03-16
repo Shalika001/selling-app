@@ -80,7 +80,7 @@ class _LoginState extends State<Register> {
                       style: TextStyle(
                         fontSize: 20.0,
                         decoration: TextDecoration.underline,
-                        color: Colors.blue[900],
+                        color: Colors.blue,
                       ),
                     ),
                   ),
