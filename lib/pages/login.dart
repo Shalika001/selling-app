@@ -89,7 +89,7 @@ class _LoginState extends State<Login> {
                     style: TextStyle(
                       fontSize: 20.0,
                       decoration: TextDecoration.underline,
-                      color: Colors.blue[900],
+                      color: Colors.blue,
                     ),
                   ),
                   ),
