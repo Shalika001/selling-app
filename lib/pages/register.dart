@@ -19,9 +19,12 @@ class _LoginState extends State<Register> {
         centerTitle: true,
         backgroundColor: Colors.grey[900],
       ),
-            body: Padding(
+
+      body:
+      Padding(
         padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
-        child: Column(
+        child:
+        Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
 
