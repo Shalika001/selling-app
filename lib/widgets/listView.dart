@@ -1,33 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:selling_app/widgets/productCard.dart';
 
-Widget textField({required String label, required String labelText}){
-  return Container(
-    child: ListView(
-      scrollDirection: Axis.vertical,
-      children: <Widget>[],
-    ),
+class myProductsList extends StatefulWidget {
+  const myProductsList({Key? key}) : super(key: key);
 
-    // child: Column(
-    //   crossAxisAlignment: CrossAxisAlignment.start,
-    //   children: [
-    //     Text(
-    //       label,
-    //       style: TextStyle(
-    //         color: Colors.black,
-    //         letterSpacing: 1.5,
-    //         fontSize: 20.0,
-    //       ),
-    //     ),
-    //     SizedBox(height: 10.0),
-    //     TextField(
-    //       obscureText: true,
-    //       decoration: InputDecoration(
-    //         border: OutlineInputBorder(),
-    //         labelText: labelText,
-    //       ),
-    //     ),
-    //   ],
-    // ),
-  );
+  @override
+  State<myProductsList> createState() => _myProductsListState();
 }
+
+class _myProductsListState extends State<myProductsList> {
+  @override
+  Widget build(BuildContext context) {
+
+    var height = MediaQuery.of(context).size.height;
+
+    return Container(
+      height: height / 12 * 9,
+      child: ListView.builder(
+          itemCount: 10,
+          itemBuilder: (BuildContext context, int index) {
+            return productCard();
+          }
+      ),
+    );
+  }
+}
+
 
