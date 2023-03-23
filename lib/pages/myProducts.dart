@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:selling_app/widgets/listView.dart';
 
 class myProducts extends StatefulWidget {
   const myProducts({Key? key}) : super(key: key);
@@ -11,6 +12,29 @@ class _myProductsState extends State<myProducts> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blueGrey
+              ),
+              child: Text('Shalika Upamada'),
+            ),
+            ListTile(
+              title: const Text('home'),
+              onTap: (){
+                // Navigator.pop(context),
+              },
+            ),
+            Divider(
+                height: 20.0,
+              color: Colors.grey[850],
+            ),
+          ],
+        ),
+      ),
       backgroundColor: Colors.grey[400],
       appBar: AppBar(
         title: Text('My Products'),
@@ -32,6 +56,7 @@ class _myProductsState extends State<myProducts> {
                 ),
               ),
             ),
+            myProductsList(),
           ],
         ),
       ),
