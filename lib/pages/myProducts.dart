@@ -23,7 +23,7 @@ class _myProductsState extends State<myProducts> {
               child: Text('Shalika Upamada'),
             ),
             ListTile(
-              title: const Text('home'),
+              title: const Text('Home'),
               onTap: (){
                 // Navigator.pop(context),
               },
